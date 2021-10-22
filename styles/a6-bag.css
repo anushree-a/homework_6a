@@ -2,6 +2,7 @@
 
 .a6-bag-main {
     padding: 2% 14%;
+    width: 70%;
 }
 
 .a6-bag-title {
@@ -12,4 +13,39 @@
 .a5-bag-oneliner {
     margin: 0px;
     padding: 10px 0;
+}
+
+.bun-selections {
+    display: flex;
+    align-items: baseline;
+    padding: 18px 0;
+    border-bottom: 1px solid #C4C4C4;
+}
+
+.individual-bun-details {
+    flex: 1;
+}
+
+.bun-name {
+    font-size: 22px;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+
+.bun-extra-info {
+    font-size: 14px;
+    margin: 0;
+    padding: 10px 0;
+}
+
+.total-amount {
+    display: flex;
+    align-items: baseline;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.total-amount-label {
+    flex: 1;
 }
