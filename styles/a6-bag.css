@@ -56,3 +56,13 @@
 .total-amount-label {
     flex: 1;
 }
+
+.proceed-to-payment-btn {
+    background-color: #E4B267;
+    cursor: pointer;
+    border: 1px solid #C4C4C4;
+    text-align: center;
+    padding: 8px;
+    margin-top: 10px;
+    height: 40px;
+}
