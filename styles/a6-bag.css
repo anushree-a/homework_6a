@@ -18,8 +18,7 @@
 .bun-selections {
     display: flex;
     align-items: center;
-    padding: 10px 0;
-    border-bottom: 1px solid #C4C4C4;
+    padding: 16px 0;
 }
 
 .individual-bun-details {
@@ -47,6 +46,7 @@
 }
 
 .total-amount {
+    border-top: 1px solid #C4C4C4;
     display: flex;
     align-items: baseline;
     font-size: 22px;
