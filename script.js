@@ -1,9 +1,10 @@
 const addItemToCart = () => {
     const selectedQty = document.getElementById("a5-bun-quantity");
     const selectedGlaze = document.getElementById("a5-bun-glaze");
+    const selectedBunType = JSON.parse(window.localStorage.getItem("currentPageDetails")).name
 
     const selectedItem = {
-        "type": JSON.parse(window.localStorage.getItem("currentPageDetails")).name,
+        "type": selectedBunType,
         "qtyString": selectedQty.options[selectedQty.selectedIndex].text,
         "glaze": selectedGlaze.options[selectedGlaze.selectedIndex].text,
         "price": JSON.parse(window.localStorage.getItem("currentPageDetails")).price,
@@ -12,7 +13,8 @@ const addItemToCart = () => {
     }
 
     const currentBagContent = JSON.parse(window.localStorage.getItem('bagContent')) || [];
-    const newBagContent = [...currentBagContent, selectedItem]
+    const filteredCurrentBagContent = currentBagContent.filter((item) => item.type != selectedBunType);
+    const newBagContent = [...filteredCurrentBagContent, selectedItem]
     window.localStorage.setItem('bagContent', JSON.stringify(newBagContent));
 
     updateBagCount(JSON.parse(window.localStorage.getItem('bagContent')).length)
