@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="styles/a5-details.css">
 </head>
 
-<body>
+<body onload="onLoadAvailablePage()">
     <nav class="a5-navbar">
         <div class="a5-logo">
             <a href="./index.html" class="a5-logo">
@@ -39,16 +39,15 @@
     </nav>
     <main class="a5-details-main">
         <a href="./a5-browse.html" class="a5-details-back-link">˂ Back to Menu</a>
-        <h1 class="a5-details-title">Pumpkin Spice</h1>
-        <p class="a5-details-oneliner">A fall favorite and something that’s always selling out, this cinnamon roll is
-            now available all year round on popular demand! Best enjoyed warm with a hot cup of tea.</p>
+        <h1 class="a5-details-title" id="a5-details-title"></h1>
+        <p class="a5-details-oneliner" id="a5-details-oneliner"></p>
         <div class="a5-details-bun-description">
             <img class="a5-details-bun-image" src="./assets/bun5.jpeg" alt="Image of Pumpkin Spice Bun">
             <div class="a5-details-bun-info">
                 <p class="a5-details-bun-available">8 buns left!</p>
                 <div class="a5-details-bun-detail">
                     <p class="a5-details-bun-detail-title">Price</p>
-                    <p class="a5-details-bun-detail-value">$ 4</p>
+                    <p class="a5-details-bun-detail-value" id="a5-details-bun-detail-value"></p>
                 </div>
                 <div class="a5-details-bun-detail">
                     <p class="a5-details-bun-detail-title">Quantity</p>
@@ -142,6 +141,7 @@
             </ul>
         </div>
     </footer>
+    <script src="pageUpdate.js" defer></script>
     <script src="script.js" defer></script>
 </body>
 
