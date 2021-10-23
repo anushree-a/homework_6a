@@ -46,4 +46,12 @@ const populateBagItems = () => {
     }
 
     document.getElementById("total-amount-value").innerHTML = '$' + totalPrice;
+
+    const proceedToPaymentBtnEl = document.getElementById("proceed-to-payment-btn")
+    if (totalPrice) {
+        proceedToPaymentBtnEl.classList.add("proceed-to-payment-btn-active")
+    }
+    else {
+        proceedToPaymentBtnEl.classList.add("proceed-to-payment-btn-inactive")
+    }
 }
