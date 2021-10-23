@@ -4,10 +4,11 @@ const addItemToCart = () => {
 
     const selectedItem = {
         "type": JSON.parse(window.localStorage.getItem("currentPageDetails")).name,
-        "qty": selectedQty.options[selectedQty.selectedIndex].text,
+        "qtyString": selectedQty.options[selectedQty.selectedIndex].text,
         "glaze": selectedGlaze.options[selectedGlaze.selectedIndex].text,
         "price": JSON.parse(window.localStorage.getItem("currentPageDetails")).price,
         "image": JSON.parse(window.localStorage.getItem("currentPageDetails")).imagePath,
+        "qtyValue": document.getElementById("a5-bun-quantity").value
     }
 
     const currentBagContent = JSON.parse(window.localStorage.getItem('bagContent')) || [];

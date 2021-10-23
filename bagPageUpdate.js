@@ -18,7 +18,7 @@ const populateBagItems = () => {
 
             const selectedItemDetailsEl = document.createElement("p");
             selectedItemDetailsEl.classList.add("bun-extra-info")
-            selectedItemDetailsEl.innerHTML = 'Quantity: ' + item.qty + ' • Glaze: ' + item.glaze
+            selectedItemDetailsEl.innerHTML = 'Quantity: ' + item.qtyString + ' • Glaze: ' + item.glaze
 
             const individualBunDetailsEl = document.createElement("div");
             individualBunDetailsEl.classList.add("individual-bun-details");
@@ -27,7 +27,7 @@ const populateBagItems = () => {
 
             const selectedItemPriceBreakup = document.createElement("div");
             selectedItemPriceBreakup.classList.add("bun-price")
-            selectedItemPriceBreakup.innerHTML = '4 x 3';
+            selectedItemPriceBreakup.innerHTML = item.qtyValue + ' X ' + item.price;
 
             selectedItemParentDivEl.appendChild(selectedItemImageEl);
             selectedItemParentDivEl.appendChild(individualBunDetailsEl);
