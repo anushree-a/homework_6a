@@ -12,7 +12,7 @@ const addItemToCart = () => {
     const newBagContent = [...currentBagContent, selectedItem]
     window.localStorage.setItem('bagContent', JSON.stringify(newBagContent));
 
-    updateBagCount(window.localStorage.length)
+    updateBagCount(JSON.parse(window.localStorage.getItem('bagContent')).length)
 }
 
 const updateBagCount = (count) => {
@@ -20,4 +20,4 @@ const updateBagCount = (count) => {
     bagCountEl.innerHTML = " (" + count + ")";
 }
 
-updateBagCount(window.localStorage.length)
+updateBagCount(JSON.parse(window.localStorage.getItem('bagContent')).length)
