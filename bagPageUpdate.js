@@ -41,7 +41,7 @@ const populateBagItems = () => {
     }
     else {
         const noItemsAddedMessageEl = document.createElement("p");
-        noItemsAddedMessageEl.innerHTML = "Nothing added yet!"
+        noItemsAddedMessageEl.innerHTML = "No items in bag yet!"
         bagContentEl.appendChild(noItemsAddedMessageEl)
     }
 
