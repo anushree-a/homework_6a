@@ -21,4 +21,4 @@ const updateBagCount = (count) => {
     bagCountEl.innerHTML = " (" + count + ")";
 }
 
-updateBagCount(JSON.parse(window.localStorage.getItem('bagContent')).length)
+updateBagCount(JSON.parse(window.localStorage.getItem('bagContent'))?.length || 0)

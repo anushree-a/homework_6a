@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="styles/a5-footer.css">
 </head>
 
-<body>
+<body onload="populateBagItems()">
     <nav class="a5-navbar">
         <div class="a5-logo">
             <a href="./index.html" class="a5-logo">
@@ -42,13 +42,8 @@
     <main class="a6-bag-main">
         <h1 class="a6-bag-main-title">Selected Items</h1>
         <p class="a6-bag-oneliner">Items that you added to your bag.</p>
-        <div class="a6-bag-content">
+        <div class="a6-bag-content" id="a6-bag-content">
             <div class="bun-selections">
-                <div class="individual-bun-details">
-                    <h4 class="bun-name" id="bun-name">Pumpkin Spice</h4>
-                    <p class="bun-extra-info" id="bun-extra-info">Quantity: 3 pcs • Glaze: None</p>
-                </div>
-                <div class="" id="bun-price">3 x 4</div>
             </div>
         </div>
         <div class="total-amount">
@@ -83,6 +78,7 @@
         </div>
     </footer>
     <script src="script.js" defer></script>
+    <script src="bagPageUpdate.js" defer></script>
 </body>
 
 </html>
