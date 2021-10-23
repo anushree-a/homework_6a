@@ -9,7 +9,7 @@ const onClickOriginalBunCard = () => {
 const onClickWalnutBunCard = () => {
     window.localStorage.setItem("currentPageDetails", JSON.stringify({
         "name": "Walnut",
-        "description": "A fall favorite and something that’s always selling out, this cinnamon roll is now available all year round on popular demand! Best enjoyed warm with a hot cup of tea.",
+        "description": "Loaded with walnuts, this bun is best enjoyed toasted and with a warm coffee. Definitely worth the hype!",
         "price": 5.50
     }))
 }
