@@ -2,6 +2,7 @@ const populateBagItems = () => {
     const bagContent = JSON.parse(window.localStorage.getItem('bagContent'))
 
     const bagContentEl = document.getElementById("a6-bag-content")
+    let totalPrice = 0;
 
     if (bagContent) {
         bagContent.forEach((item) => {
@@ -27,13 +28,15 @@ const populateBagItems = () => {
 
             const selectedItemPriceBreakup = document.createElement("div");
             selectedItemPriceBreakup.classList.add("bun-price")
-            selectedItemPriceBreakup.innerHTML = item.qtyValue + ' X ' + item.price;
+            selectedItemPriceBreakup.innerHTML = item.qtyValue + ' X $' + item.price;
 
             selectedItemParentDivEl.appendChild(selectedItemImageEl);
             selectedItemParentDivEl.appendChild(individualBunDetailsEl);
             selectedItemParentDivEl.appendChild(selectedItemPriceBreakup);
 
             bagContentEl.appendChild(selectedItemParentDivEl)
+
+            totalPrice += item.qtyValue * item.price
         })
     }
     else {
@@ -41,4 +44,6 @@ const populateBagItems = () => {
         noItemsAddedMessageEl.innerHTML = "Nothing added yet!"
         bagContentEl.appendChild(noItemsAddedMessageEl)
     }
+
+    document.getElementById("total-amount-value").innerHTML = '$' + totalPrice;
 }
