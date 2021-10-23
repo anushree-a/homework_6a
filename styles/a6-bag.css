@@ -17,13 +17,14 @@
 
 .bun-selections {
     display: flex;
-    align-items: baseline;
-    padding: 18px 0;
+    align-items: center;
+    padding: 10px 0;
     border-bottom: 1px solid #C4C4C4;
 }
 
 .individual-bun-details {
     flex: 1;
+    padding: 0 20px;
 }
 
 .bun-name {
@@ -31,6 +32,12 @@
     margin: 0;
     padding: 0;
     font-weight: bold;
+}
+
+.bun-image {
+    padding-top: 10px;
+    height: 80px;
+    margin: 0;
 }
 
 .bun-extra-info {

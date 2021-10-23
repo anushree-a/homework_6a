@@ -6,7 +6,11 @@ const populateBagItems = () => {
     if (bagContent) {
         bagContent.forEach((item) => {
             const selectedItemParentDivEl = document.createElement("div");
-            selectedItemParentDivEl.classList.add("bun-selections")               // Create a <li> node
+            selectedItemParentDivEl.classList.add("bun-selections")
+
+            const selectedItemImageEl = document.createElement("img");
+            selectedItemImageEl.classList.add("bun-image")
+            selectedItemImageEl.src = item.image;
 
             const selectedItemTitleEl = document.createElement("h4");
             selectedItemTitleEl.classList.add("bun-name")
@@ -14,7 +18,7 @@ const populateBagItems = () => {
 
             const selectedItemDetailsEl = document.createElement("p");
             selectedItemDetailsEl.classList.add("bun-extra-info")
-            selectedItemDetailsEl.innerHTML = 'Quantity: ' + item.qty + '• Glaze: ' + item.glaze
+            selectedItemDetailsEl.innerHTML = 'Quantity: ' + item.qty + ' • Glaze: ' + item.glaze
 
             const individualBunDetailsEl = document.createElement("div");
             individualBunDetailsEl.classList.add("individual-bun-details");
@@ -25,6 +29,7 @@ const populateBagItems = () => {
             selectedItemPriceBreakup.classList.add("bun-price")
             selectedItemPriceBreakup.innerHTML = '4 x 3';
 
+            selectedItemParentDivEl.appendChild(selectedItemImageEl);
             selectedItemParentDivEl.appendChild(individualBunDetailsEl);
             selectedItemParentDivEl.appendChild(selectedItemPriceBreakup);
 
