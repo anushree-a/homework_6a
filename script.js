@@ -5,7 +5,8 @@ const addItemToCart = () => {
     const selectedItem = {
         "type": JSON.parse(window.localStorage.getItem("currentPageDetails")).name,
         "qty": selectedQty.options[selectedQty.selectedIndex].text,
-        "glaze": selectedGlaze.options[selectedGlaze.selectedIndex].text
+        "glaze": selectedGlaze.options[selectedGlaze.selectedIndex].text,
+        "price": JSON.parse(window.localStorage.getItem("currentPageDetails")).price,
     }
 
     const currentBagContent = JSON.parse(window.localStorage.getItem('bagContent')) || [];
