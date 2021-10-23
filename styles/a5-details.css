@@ -156,3 +156,27 @@
 .a5-bun-out-of-stock {
     color: #FF0303;
 }
+
+.item-added-toast-msg {
+    position: fixed;
+    left: 92%;
+    padding: 15px;
+    width: 130px;
+    background-color: #E4B267;
+    transform: translate(-50%, 0);
+    animation: fadein 1s;
+    font-size: 14px;
+    text-align: center;
+}
+
+@keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+
+    to {
+        bottom: 80px;
+        opacity: 1;
+    }
+}

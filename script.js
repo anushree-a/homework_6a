@@ -16,6 +16,17 @@ const addItemToCart = () => {
     window.localStorage.setItem('bagContent', JSON.stringify(newBagContent));
 
     updateBagCount(JSON.parse(window.localStorage.getItem('bagContent')).length)
+    showToast()
+}
+
+const showToast = () => {
+    const toastEl = document.createElement('div')
+    toastEl.classList.add('item-added-toast-msg');
+    toastEl.innerHTML = "Added to bag!"
+    setTimeout(function () {
+        toastEl.remove()
+    }, 4000);
+    document.body.appendChild(toastEl);
 }
 
 const updateBagCount = (count) => {
