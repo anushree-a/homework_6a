@@ -21,7 +21,9 @@
 .a5-nav-link {
     text-decoration: none;
     margin-left: 40px;
-    color: #000000
+    color: #000000;
+    display: flex;
+    align-items: center;
 }
 
 .a5-nav-link:hover {
