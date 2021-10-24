@@ -1,3 +1,5 @@
+// Dynamically injects content into bag page based on
+// user selections
 const populateBagItems = () => {
     const bagContent = JSON.parse(window.localStorage.getItem('bagContent'))
 

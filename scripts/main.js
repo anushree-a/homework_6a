@@ -1,3 +1,4 @@
+// Handles addition of item to cart
 const addItemToCart = () => {
     const selectedQty = document.getElementById("a5-bun-quantity");
     const selectedGlaze = document.getElementById("a5-bun-glaze");
@@ -21,6 +22,7 @@ const addItemToCart = () => {
     showToast()
 }
 
+// Handles toast popup action
 const showToast = () => {
     const toastEl = document.createElement('div')
     toastEl.classList.add('item-added-toast-msg');
@@ -31,6 +33,7 @@ const showToast = () => {
     document.body.appendChild(toastEl);
 }
 
+// Updates total count of items in bag
 const updateBagCount = (count) => {
     const bagCountEl = document.getElementById("bag-count");
     bagCountEl.innerHTML = " (" + count + ")";

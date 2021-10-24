@@ -1,3 +1,4 @@
+// Handles click on original bun card
 const onClickOriginalBunCard = () => {
     window.localStorage.setItem("currentPageDetails", JSON.stringify({
         "name": "Original",
@@ -7,6 +8,7 @@ const onClickOriginalBunCard = () => {
     }))
 }
 
+// Handles click on walnut bun card
 const onClickWalnutBunCard = () => {
     window.localStorage.setItem("currentPageDetails", JSON.stringify({
         "name": "Walnut",
@@ -16,6 +18,7 @@ const onClickWalnutBunCard = () => {
     }))
 }
 
+// Handles click on blackberry bun card
 const onClickBlackberryBunCard = () => {
     window.localStorage.setItem("currentPageDetails", JSON.stringify({
         "name": "Blackberry",
@@ -25,6 +28,7 @@ const onClickBlackberryBunCard = () => {
     }))
 }
 
+// Handles click on pumpkin spice bun card
 const onClickPumpkinSpiceBunCard = () => {
     window.localStorage.setItem("currentPageDetails", JSON.stringify({
         "name": "Pumpkin Spice",
@@ -34,6 +38,7 @@ const onClickPumpkinSpiceBunCard = () => {
     }))
 }
 
+// Handles click on gluten free bun card
 const onClickGlutenFreeBunCard = () => {
     window.localStorage.setItem("currentPageDetails", JSON.stringify({
         "name": "Original (Gluten Free)",
@@ -43,6 +48,7 @@ const onClickGlutenFreeBunCard = () => {
     }))
 }
 
+// Handles click on caramel bun card
 const onClickCaramelBunCard = () => {
     window.localStorage.setItem("currentPageDetails", JSON.stringify({
         "name": "Caramel Pecan",
