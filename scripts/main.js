@@ -1,5 +1,5 @@
 // Handles addition of item to cart
-const addItemToCart = () => {
+const addItemToBag = () => {
     const selectedQty = document.getElementById("a5-bun-quantity");
     const selectedGlaze = document.getElementById("a5-bun-glaze");
     const selectedBunType = JSON.parse(window.localStorage.getItem("currentPageDetails")).name
