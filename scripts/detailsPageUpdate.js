@@ -59,7 +59,7 @@ const onClickCaramelBunCard = () => {
     const bunDetails = JSON.parse(window.localStorage.getItem("currentPageDetails"))
 }
 
-const onLoadAvailablePage = () => {
+const onLoadDetailsPage = () => {
     const bunDetails = JSON.parse(window.localStorage.getItem("currentPageDetails"))
     document.getElementById("a5-details-title").innerHTML = bunDetails.name;
     document.getElementById("a5-details-oneliner").innerHTML = bunDetails.description;
