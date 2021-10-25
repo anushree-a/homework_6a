@@ -63,6 +63,12 @@ const onLoadDetailsPage = () => {
     const bunDetails = JSON.parse(window.localStorage.getItem("currentPageDetails"))
     document.getElementById("a5-details-title").innerHTML = bunDetails.name;
     document.getElementById("a5-details-oneliner").innerHTML = bunDetails.description;
-    document.getElementById("a5-details-bun-detail-value").innerHTML = "$ " + bunDetails.price;
+    document.getElementById("a5-details-bun-detail-value").innerHTML = "$ " + bunDetails.price + " X 1";
     document.getElementById("a5-details-bun-image").src = bunDetails.imagePath;
+}
+
+const onSelectOption = (context) => {
+    context.blur()
+    const bunDetails = JSON.parse(window.localStorage.getItem("currentPageDetails"))
+    document.getElementById("a5-details-bun-detail-value").innerHTML = "$ " + bunDetails.price + " X " + document.getElementById("a5-bun-quantity").value;
 }
