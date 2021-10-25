@@ -67,7 +67,8 @@ const onLoadDetailsPage = () => {
     document.getElementById("a5-details-bun-image").src = bunDetails.imagePath;
 }
 
-const onSelectOption = (context) => {
+// Handles quantity selection for bun 
+const onSelectQuantity = (context) => {
     context.blur()
     const bunDetails = JSON.parse(window.localStorage.getItem("currentPageDetails"))
     document.getElementById("a5-details-bun-detail-value").innerHTML = "$" + bunDetails.price + " X " + document.getElementById("a5-bun-quantity").value;
