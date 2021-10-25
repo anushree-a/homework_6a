@@ -70,5 +70,5 @@ const onLoadDetailsPage = () => {
 const onSelectOption = (context) => {
     context.blur()
     const bunDetails = JSON.parse(window.localStorage.getItem("currentPageDetails"))
-    document.getElementById("a5-details-bun-detail-value").innerHTML = "$ " + bunDetails.price + " X " + document.getElementById("a5-bun-quantity").value;
+    document.getElementById("a5-details-bun-detail-value").innerHTML = "$" + bunDetails.price + " X " + document.getElementById("a5-bun-quantity").value;
 }
