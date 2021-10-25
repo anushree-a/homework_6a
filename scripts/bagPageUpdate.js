@@ -30,7 +30,7 @@ const populateBagItems = () => {
 
             const selectedItemPriceBreakup = document.createElement("div");
             selectedItemPriceBreakup.classList.add("bun-price")
-            selectedItemPriceBreakup.innerHTML = item.qtyValue + ' X $' + item.price;
+            selectedItemPriceBreakup.innerHTML = '$' + item.price + ' X ' + item.qtyValue;
 
             selectedItemParentDivEl.appendChild(selectedItemImageEl);
             selectedItemParentDivEl.appendChild(individualBunDetailsEl);
